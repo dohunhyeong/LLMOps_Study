@@ -1,10 +1,8 @@
-flowchart LR
-    DEV["Develop
-LangGraph / Deep Agents"] --> TEST["Verify
-unit + trajectory eval"] --> TRACE["Observe
-tracing + metrics"] --> DEPLOY["Deploy
-Cloud / Self-hosted"] --> RUN["Operate
-monitoring + feedback"]
+flowchart TD
+    DEV["Develop<br/>LangGraph / Deep Agents"] --> TEST["Verify<br/>unit + trajectory eval"]
+    TEST --> TRACE["Observe<br/>tracing + metrics"]
+    TRACE --> DEPLOY["Deploy<br/>Cloud / Self-hosted"]
+    DEPLOY --> RUN["Operate<br/>monitoring + feedback"]
     RUN -. failures / drift .-> TEST
     RUN -. usage insights .-> DEV
 

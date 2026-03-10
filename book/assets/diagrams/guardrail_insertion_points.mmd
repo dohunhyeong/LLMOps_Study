@@ -1,11 +1,13 @@
-flowchart LR
-    IN["User input"] --> GA["Input guardrails
-before_agent / PII / prompt injection"] --> AG["Agent execution"] --> GT["Tool guardrails
-HITL / allowlist / runtime checks"] --> GO["Output guardrails
-after_agent / redact / quality checks"] --> OUT["Final response"]
-    GA -. block .-> FAIL1["reject / sanitize input"]
-    GT -. stop .-> FAIL2["ask approval / deny tool call"]
-    GO -. rewrite .-> FAIL3["mask / regenerate output"]
+flowchart TD
+    IN["User input"] --> GA["Input guardrails<br/>before_agent / PII / prompt injection"]
+    GA --> AG["Agent execution"]
+    AG --> GT["Tool guardrails<br/>HITL / allowlist / runtime checks"]
+    GT --> GO["Output guardrails<br/>after_agent / redact / quality checks"]
+    GO --> OUT["Final response"]
+
+    GA -. block .-> FAIL1["Reject / sanitize input"]
+    GT -. stop .-> FAIL2["Ask approval / deny tool call"]
+    GO -. rewrite .-> FAIL3["Mask / regenerate output"]
 
     style IN fill:#83ced2,stroke:#5ba8ad,color:#1a3a3c
     style AG fill:#ed7969,stroke:#c45a4d,color:#fff
