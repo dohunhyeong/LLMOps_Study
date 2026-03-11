@@ -83,3 +83,6 @@
 #include "chapters/part6/ch03.typ"
 #include "chapters/part6/ch04.typ"
 #include "chapters/part6/ch05.typ"
+
+// ─── Appendix ────────────────────────────────────────────────
+#include "chapters/appendix_glossary.typ"
