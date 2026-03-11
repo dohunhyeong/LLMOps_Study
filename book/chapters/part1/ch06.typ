@@ -82,9 +82,11 @@ _추가 비교 정보:_
 
 표만으로는 선택이 어려울 수 있습니다. 구체적인 시나리오별로 어떤 프레임워크가 적합한지 살펴봅시다.
 
+#pagebreak(weak: true)
+
 == 6.2 어떤 걸 선택해야 할까?
 
-#align(center)[#image("../../assets/diagrams/png/framework_selection_tree.png", width: 92%, height: 118mm, fit: "contain")]
+#align(center)[#image("../../assets/diagrams/png/framework_selection_tree.png", width: 96%, height: 132mm, fit: "contain")]
 
 의사결정 트리를 읽는 가장 쉬운 방법은 _"어디까지 직접 제어하고 싶은가?"_ 를 먼저 묻는 것입니다. 도구 호출 몇 개와 프롬프트 조합만으로 충분하면 LangChain, 상태 전이와 재개 시점을 직접 설계해야 하면 LangGraph, 파일/계획/서브에이전트가 기본 탑재된 작업형 에이전트가 필요하면 Deep Agents가 자연스럽습니다.
 
