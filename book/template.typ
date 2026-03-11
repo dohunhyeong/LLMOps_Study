@@ -305,6 +305,26 @@
   v(6pt)
 }
 
+#let diagram-guide-box(body) = {
+  v(4pt)
+  block(
+    width: 100%,
+    fill: rgb("#FAFAFA"),
+    stroke: (left: 3pt + luma(190)),
+    inset: (left: 14pt, right: 12pt, top: 8pt, bottom: 8pt),
+    radius: (top-right: 3pt, bottom-right: 3pt),
+    breakable: true,
+  )[
+    #text(weight: "bold", fill: luma(110), size: 8.8pt, tracking: 0.5pt)[
+      그림 읽는 법
+    ]
+    #v(4pt)
+    #set text(size: 9.2pt, fill: luma(60))
+    #body
+  ]
+  v(6pt)
+}
+
 // ─── Chapter Summary Section ─────────────────────────────────
 #let chapter-summary-header() = {
   v(16pt)

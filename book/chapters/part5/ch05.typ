@@ -82,6 +82,10 @@ RAG를 처음 볼 때는 _오프라인 인덱싱_ 과 _온라인 질의 처리_ 
 
 #align(center)[#image("../../assets/diagrams/png/rag_architecture_choices.png", width: 74%, height: 170mm, fit: "contain")]
 
+#diagram-guide-box[
+아래에서 위로 비교하지 말고, 각 박스를 독립 패턴으로 보면 됩니다. *2-Step RAG*는 가장 단순하고, *Agentic RAG*는 검색 시점과 횟수를 에이전트가 결정하며, *LangGraph Custom RAG*는 검색 이후의 평가와 재시도 규칙까지 명시합니다.
+]
+
 #table(
   columns: 5,
   align: left,

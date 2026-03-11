@@ -39,6 +39,10 @@ print("모델 준비 완료:", model.model_name)
 
 #align(center)[#image("../../assets/diagrams/png/middleware_pipeline.png", width: 72%, height: 156mm, fit: "contain")]
 
+#diagram-guide-box[
+왼쪽에서 오른쪽으로 읽으면 됩니다. 요청이 들어오면 먼저 *before* 계열 훅이 개입하고, 모델 호출을 중심으로 *wrap* 훅이 감싸며, 결과가 나오면 *after* 계열 훅이 후처리를 담당합니다.
+]
+
 _5가지 미들웨어 훅:_
 
 #table(
@@ -245,4 +249,3 @@ _핵심 포인트:_
 - `@dynamic_prompt`를 사용하면 런타임 정보를 시스템 프롬프트에 주입할 수 있습니다.
 
 이 장에서는 에이전트 실행 파이프라인의 모든 단계를 제어하는 미들웨어 시스템을 학습했습니다. 다음 장에서는 에이전트가 _위험한 작업을 실행하기 전에 사람의 승인을 받는_ Human-in-the-Loop 패턴과, `ToolRuntime`을 통한 런타임 컨텍스트 주입, 그리고 MCP를 통한 외부 도구 서버 연동을 다룹니다.
-
