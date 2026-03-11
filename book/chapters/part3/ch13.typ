@@ -179,6 +179,11 @@ Functional API 결과: {'topic': 'LangGraph', 'content': 'Essay about LangGraph'
 
 #note-box[Functional API가 항상 "더 좋다"는 의미가 아닙니다. 간단한 선형 워크플로에서는 Functional API가 간결하지만, 조건 분기가 많거나 병렬 실행 경로가 복잡한 경우에는 Graph API의 명시적 구조가 가독성과 유지보수 면에서 유리합니다.]
 
+#note-box[_언제 쓰고, 언제 쓰지 않을까?_
+- *Graph API*는 복잡한 결정 트리, 공유 상태, 병렬 처리, 시각적 디버깅이 중요할 때 적합합니다.
+- *Functional API*는 기존 Python 함수 흐름을 살리면서 `@task` 단위의 내구성을 얻고 싶을 때 적합합니다.
+- 반대로 단순한 선형 태스크를 Graph API로 과하게 쪼개면 보일러플레이트가 늘고, 복잡한 병렬/분기 그래프를 Functional API만으로 우겨 넣으면 흐름이 코드 속에 숨어 가독성이 떨어질 수 있습니다.]
+
 #table(
   columns: 3,
   align: left,
