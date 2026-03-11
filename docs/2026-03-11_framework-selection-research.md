@@ -201,3 +201,39 @@
 1. 위 내용을 바탕으로 Book의 비교/선택 장에 `언제 쓰는가 / 언제 쓰지 않는가` 박스를 추가한다.
 2. RAG/SQL/HITL 관련 판단 문장은 공식 문서 추가 확인 후만 넣는다.
 3. 문장마다 가능하면 출처를 장 끝 참고 문서에 연결한다.
+
+---
+
+## 9. 공식 문서 재확인 메모 (2026-03-11)
+
+아래 공식 문서들을 다시 확인하여, 표현 강도가 과도하지 않도록 정리했다.
+
+### LangChain Overview
+- 출처: https://docs.langchain.com/oss/python/langchain/overview
+- 확인 포인트:
+  - LangChain은 빠르게 에이전트를 만들 수 있는 상위 프레임워크다.
+  - 고급 요구사항에서는 LangGraph 또는 Deep Agents를 함께 고려하라고 안내한다.
+
+### Frameworks, runtimes, and harnesses
+- 출처: https://docs.langchain.com/oss/python/concepts/products
+- 확인 포인트:
+  - LangGraph는 더 높은 제어와 내구성 실행을 담당하는 런타임 계층이다.
+  - Deep Agents는 계획, 파일시스템, 서브에이전트 같은 batteries-included 하네스 기능을 제공한다.
+
+### Choosing APIs
+- 출처: https://docs.langchain.com/oss/python/langgraph/choosing-apis
+- 확인 포인트:
+  - Graph API는 명시적 흐름/상태가 중요할 때 적합하다.
+  - Functional API는 함수형 흐름을 유지하면서 task 경계를 활용하고 싶을 때 더 간결하다.
+
+### Workflows and agents
+- 출처: https://docs.langchain.com/oss/python/langgraph/workflows-agents
+- 확인 포인트:
+  - Workflows는 정해진 코드 경로를, Agents는 동적인 도구 선택과 반복 실행을 담당한다.
+  - 따라서 문제의 불확실성이 낮으면 workflow, 높으면 agent 쪽이 더 자연스럽다.
+
+### Deep Agents Subagents
+- 출처: https://docs.langchain.com/oss/python/deepagents/subagents
+- 확인 포인트:
+  - Subagents는 context bloat 완화와 전문 역할 분리에 적합하다.
+  - 단순하고 한 번에 끝나는 작업에는 오버헤드가 될 수 있다.
