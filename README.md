@@ -1,3 +1,4 @@
+# Based on the original work by BAEM1n/langchain-langgraph-deepagent-notebooks
 # Agent Engineering Notebooks
 
 LLM 기반 AI 에이전트 개발을 **초급부터 프로덕션 배포까지** 단계별로 학습하는 Jupyter Notebook 교육 자료입니다.
